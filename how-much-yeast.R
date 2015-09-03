@@ -3,11 +3,16 @@
 args = commandArgs(T)
 ods = read.csv(file = args[1],
                header = FALSE,
-               stringsAsFactors = FALSE,
-               row.names = FALSE)
-dilFac = args[2]
-finOd = args[3]
-finVol = args[4]
+               stringsAsFactors = FALSE)
+# trouble shooting 
+# ods = read.csv(file = "yeast.csv",
+#                header = FALSE,
+#                stringsAsFactors = FALSE)
+# 0.1/ods[,2]
+# 
+dilFac = as.numeric(args[2])
+finOd = as.numeric(args[3])
+finVol = as.numeric(args[4])
 howMuchYeast = function(ods, dilFac, finOd, finVol) {
   volYeast = (finOd/ods[,2])*finVol
   volMed = finVol - volYeast
