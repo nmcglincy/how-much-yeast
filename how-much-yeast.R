@@ -18,8 +18,8 @@ howMuchYeast = function(ods, dilFac, finOd, finVol) {
   volYeast = (finOd/(ods[,2]*dilFac))*finVol
   volMed = finVol - volYeast
   result = data.frame(strain = ods[,1],
-                      mLs.yeast = volYeast,
-                      mLs.media = volMed)
+                      mLs.yeast = signif(volYeast, digits = 2),
+                      mLs.media = signif(volMed, digits = 3))
   print(result)
   write.csv(result, 
             file = paste(Sys.Date(),"yeast-ODs.csv", sep = "-"),

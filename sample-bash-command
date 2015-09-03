@@ -1,0 +1,1 @@
+Rscript how-much-yeast.R yeast.csv 8 0.1 6
