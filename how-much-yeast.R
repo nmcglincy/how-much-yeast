@@ -1,4 +1,5 @@
 # A function to calculate the initial dilution of yeast cultures
+# need to have a blank line at the end of your csv
 # 
 args = commandArgs(T)
 ods = read.csv(file = args[1],
