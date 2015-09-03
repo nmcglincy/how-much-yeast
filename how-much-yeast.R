@@ -5,12 +5,6 @@ args = commandArgs(T)
 ods = read.csv(file = args[1],
                header = FALSE,
                stringsAsFactors = FALSE)
-# trouble shooting 
-# ods = read.csv(file = "yeast.csv",
-#                header = FALSE,
-#                stringsAsFactors = FALSE)
-# 0.1/ods[,2]
-# 
 dilFac = as.numeric(args[2])
 finOd = as.numeric(args[3])
 finVol = as.numeric(args[4])
