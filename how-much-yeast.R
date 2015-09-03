@@ -14,14 +14,14 @@ dilFac = as.numeric(args[2])
 finOd = as.numeric(args[3])
 finVol = as.numeric(args[4])
 howMuchYeast = function(ods, dilFac, finOd, finVol) {
-  volYeast = (finOd/ods[,2])*finVol
+  volYeast = (finOd/(ods[,2]*dilFac))*finVol
   volMed = finVol - volYeast
   result = data.frame(strain = ods[,1],
-                      vol.yeast = volYeast,
-                      vol.media = volMed)
+                      mLs.yeast = volYeast,
+                      mLs.media = volMed)
   print(result)
   write.csv(result, 
-            file = print(paste(Sys.Date(),"yeast-ODs.csv", sep = "-")),
+            file = paste(Sys.Date(),"yeast-ODs.csv", sep = "-"),
             row.names = FALSE)
 }
 howMuchYeast(ods, dilFac, finOd, finVol)
