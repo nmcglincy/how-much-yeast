@@ -21,7 +21,7 @@ howMuchYeast = function(ods, dilFac, finOd, finVol) {
                       vol.media = volMed)
   print(result)
   write.csv(result, 
-            file = "how-much-yeast.csv",
+            file = print(Sys.Date(), "how-much-yeast.csv", sep = ""),
             row.names = FALSE)
 }
 howMuchYeast(ods, dilFac, finOd, finVol)
