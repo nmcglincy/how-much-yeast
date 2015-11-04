@@ -1,0 +1,14 @@
+plot(x = c(0),
+     y = c(0.1),
+     type = "b",
+     xlim = c(0,6),
+     ylim = c(0,1),
+     xlab = "Time, hrs",
+     ylab = "OD600",
+     main = "N59N62 into 295, mch-SL")
+abline(h = 0.4,
+       lty = 2,
+       col = "green")
+abline(h = 0.6,
+       lty = 2,
+       col = "red")
