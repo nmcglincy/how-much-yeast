@@ -1,0 +1,10 @@
+f: markdown
+S:
+s:
+mathjax:
+bibliography: papers-lib.bib
+number-sections:
+csl: cell.csl
+highlight-style: tango
+M:linkcolor=CornflowerBlue
+V:geometry:margin=1in
